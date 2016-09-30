@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reminder Web Application</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/Reminder_app_style.css"></script>
+	<link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i">
+</head>
+<body>
+<h1>WELCOME TO <span style="color: red;">REMINDME</span></h1>
+<h2><span style="color: red;">REMINDME</span> IS YOUR VERY OWN, EASY-TO-USE REMINDER APPLICATION</h2>
+
+{% block content %}
+
+<div id="instructions">Instructions on how to use this reminder tool:<br>
+<ul>
+<li><span style="font-family: 'Luckiest Guy', cursive;">IMPORTANT:</span> Please change your browser settings to <span style="font-family: 'Luckiest Guy', cursive;">allow notifications</span> for this application.</li>
+<li>You can add up to 3 reminders at a time.</li>
+<li><span style="font-family: 'Luckiest Guy', cursive;">ADDING A REMINDER: </span><br>
+Add your reminder in the textbox provided, <span style="font-style: bold;">and</span> then select a time interval at which you want your notification to appear. Press the <span style="font-style: italic;">Add reminder!</span> button.</li>
+<li>If no time is chosen, it defaults to 5 mins.</li>
+<li><span style="font-family: 'Luckiest Guy', cursive;">
+HOW TO START RECEIVING THE REMINDER AS A DESKTOP NOTIFICATION:  </span><br>Simply press <span style="font-style: italic;">Trigger</span> and your added reminder will continue to appear as a desktop notification based on the time interval selected.</li>
+<li><span style="font-family: 'Luckiest Guy', cursive;">
+IF YOU WANT TO STOP THE NOTIFICATIONS: </span><br>Press the <span style="font-style: italic;">Remove reminder</span> button </li>
+</div>
+
+<div id="form">
+		
+		<div id="reminderbox">
+		<label style="font-size: 30px;">REMINDER</label><br>
+		<textarea type="text" name="area1"></textarea>
+		<div id="error1">You can't have an empty reminder.</div>
+		<br>
+		<div id="dropdown">
+		<label style="font-family: Linux Libertine;font-size: 15px;">Interval:&nbsp;</label>
+		<select id="interval1">
+			<option value="0"></option>
+			<option value="5">5mins</option>
+			<option value="10">10mins</option>
+			<option value="15">15mins</option>
+			<option value="20">20mins</option>
+			<option value="25">25mins</option>
+			<option value="30">30mins</option>
+			<option value="35">35mins</option>
+			<option value="40">40mins</option>
+			<option value="45">45mins</option>
+			<option value="50">50mins</option>
+			<option value="55">55mins</option>
+			<option value="60">1h</option>
+		</select>
+		</div>
+		<br>
+		<button type="button" onclick="notify1()">Trigger notification</button>
+		<button type="button" onclick="stopalert1()">Stop notification</button>
+		</div>
+
+
+
+
+		<div id="reminderbox">
+		<label style="font-size: 30px;">REMINDER</label><br>
+		<textarea type="text" name="area2"></textarea>
+		<div id="error2">You can't have an empty reminder.</div>
+		<br>
+		<div id="dropdown">
+		<label style="font-family: Linux Libertine;font-size: 15px;">Interval:&nbsp;</label>
+		<select id="interval2">
+			<option value="0"></option>
+			<option value="5">5mins</option>
+			<option value="10">10mins</option>
+			<option value="15">15mins</option>
+			<option value="20">20mins</option>
+			<option value="25">25mins</option>
+			<option value="30">30mins</option>
+			<option value="35">35mins</option>
+			<option value="40">40mins</option>
+			<option value="45">45mins</option>
+			<option value="50">50mins</option>
+			<option value="55">55mins</option>
+			<option value="60">1h</option>
+		</select>
+		</div>
+		<br>
+		<button type="button" onclick="notify2()">Trigger notification</button>
+		<button type="button" onclick="stopalert2()">Stop notification</button>
+		</div>
+
+
+
+
+		<div id="reminderbox">
+		<label style="font-size: 30px;">REMINDER</label><br>
+		<textarea type="text" name="area3"></textarea>
+		<div id="error3">You can't have an empty reminder.</div>
+		<br>
+		<div id="dropdown">
+		<label style="font-family: Linux Libertine;font-size: 15px;">Interval:&nbsp;</label>
+		<select id="interval3">
+			<option value="0"></option>
+			<option value="5">5mins</option>
+			<option value="10">10mins</option>
+			<option value="15">15mins</option>
+			<option value="20">20mins</option>
+			<option value="25">25mins</option>
+			<option value="30">30mins</option>
+			<option value="35">35mins</option>
+			<option value="40">40mins</option>
+			<option value="45">45mins</option>
+			<option value="50">50mins</option>
+			<option value="55">55mins</option>
+			<option value="60">1h</option>
+		</select>
+		</div>
+		<br>
+		<button type="button" onclick="notify3()">Trigger notification</button>
+		<button type="button" onclick="stopalert3()">Stop notification</button>
+		</div>
+		<br><br>
+		
+		</div>
+		{% endblock %}
+
+
+<script type="text/javascript" src="/js/reminder_tool_js.js"></script>
+</body>
+</html>

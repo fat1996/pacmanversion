@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="players" style="font-size:30px">Here's the list of high scores!<br>
+{% for player in players %}
+
+<div class="player">
+{% if loop.index<=6 %}
+
+<div class="survey-title"><span style="font-size: 20px;">#{{loop.index}}&nbsp;</span>
+						  <span style="color:#ffde00;font-size: 20px;text-shadow: 2px 2px red;">USERNAME:&nbsp;</span>
+						  <span style="font-size: 20px;">{{player.playername}}&nbsp;</span><br>
+						  <span style="color:#ffde00;font-size: 20px;text-shadow: 2px 2px red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCORE:&nbsp;&nbsp;</span>
+						  <span style="font-size: 20px;">{{player.playerscore}}</span></div>
+
+<!-- <hr style="border: 1px solid black;"> -->
+</div>
+{% endif %}
+{% endfor %}
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+body{
+	margin-right: 20%;
+	margin-left: 20%;
+	font-family: Linux Libertine;
+}
+#form{
+margin: 0 auto;
+/*border:1px solid;*/
+padding-left: 10px;
+padding-right: 10px;
+}
+ul li{
+	text-align: justify;
+	list-style-type: square;
+	color: black;
+}
+#dropdown{
+	display: inline-block;
+	/*border:1px solid;*/
+	width: 100%;
+}
+select{
+	margin-top: 5px;
+}
+option{
+	font-family: Linux Libertine;
+}
+h1{
+
+}
+h1,h2{
+	font-family: 'Luckiest Guy', cursive;
+	text-decoration: none;
+	font-weight: normal;
+	text-align: center;
+}
+button, a{
+	font-family: Linux Libertine;
+	text-decoration: none;
+	color: black;
+	margin-top: 5px;
+}
+textarea{
+	width: 40%;
+	height: 70%;
+	float: left;
+}
+#error1, #error2, #error3{
+	float: left;
+	/*width: 50%;*/
+	/*height: 70%;*/
+	color: red;
+	padding-left: 5px;
+	display: none;
+	/*border:1px solid;*/
+}
+#reminderbox{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+label{
+	font-family: 'Luckiest Guy', cursive;
+}
+.reminderlist{
+	font-family: 'Luckiest Guy', cursive;
+}
+td{
+		text-align: left;
+	}
+th{
+	text-align: left;
+}

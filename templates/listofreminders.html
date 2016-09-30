@@ -1,0 +1,51 @@
+{% extends "ReminderApp.html" %}
+<style type="text/css">
+
+</style>
+
+{% block content %}
+<div class="reminderlist" style="font-size:20px;font-weight: normal;">HERE'S THE LIST OF PREVIOUSLY ADDED REMINDERS: <br>
+
+<table style="margin: 0 auto;width: 100%;">
+<tr>
+	<th style="font-weight: normal;width: 60%;color: red;">REMINDER</th>
+	<th style="font-weight: normal;width: 40%;color: red;">DATE ADDED</th>
+</tr>
+</table>
+{% for reminder in reminders %}
+
+<div class="player">
+<table style="margin: 0 auto;width: 100%;">
+<col width="60%">
+<col width="40%">
+{% if reminder.reminder1 %}
+<tr>
+	<td>{{reminder.reminder1}}</td>
+	<td>{{reminder.reminderdate}}</td>
+</tr>
+{% endif %}
+
+{% if reminder.reminder2 %}
+<tr>
+	<td>{{reminder.reminder2}}</td>
+	<td>{{reminder.reminderdate}}</td>
+</tr>
+{% endif %}
+
+{% if reminder.reminder3 %}
+<tr>
+	<td>{{reminder.reminder3}}</td>
+	<td>{{reminder.reminderdate}}</td>
+</tr>
+{% endif %}
+</table>
+</div>
+
+<!-- <hr style="border: 1px solid black;"> -->
+</div>
+{% endfor %}
+
+<button><a href="/remindertool">Take me back to the homepage!</a></button>
+
+</div>
+{% endblock %}

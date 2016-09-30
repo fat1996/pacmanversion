@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Pacman</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/Snake_Game_Style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+	
+	<p id="title">MY RENDITION OF PACMAN</p>
+</head>
+<body>
+
+<div class="game">
+<span style="font-size:30px">TIMER: </span>
+<span id="timer"></span>
+
+<div id="container">
+	<div id="snake"></div>
+	<div id="food"></div>
+</div>
+
+<form method="post">
+
+<label>
+	<div id="name">ENTER USERNAME:</div>
+	<input type="text" name="name">
+</label>
+
+<br>
+<br>
+
+<label>
+	<span style="float: left;">FINAL SCORE: &nbsp;</span><div id="gamescore" style="float: left;"></div>
+	<input type="text" name="score" hidden="true">
+</label>
+
+<br>
+<br>
+
+<input type="submit" name="submitbtn">
+</form>
+
+
+<button id="replay"><a href="/">PLAY AGAIN</a></button>
+<button><a href="/players">HIGH SCORERS</a></button>
+</div>
+
+
+
+{% block content %}
+{% endblock %}
+
+<script type="text/javascript" src="/js/Snake_Game_js.js"></script>
+
+</body>
+</html>
